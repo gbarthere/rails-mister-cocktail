@@ -16,7 +16,13 @@
 .banner p {
   font-size: 25px;
   font-weight: lighter;
-  color: rgb(255, 255, 255);
+  color: gold;
   opacity: 0.6;
   margin-bottom: 30px;
+}
+
+.banner img {
+  width: 50%;
+  max-width: 50%;
+  height: auto;
 }

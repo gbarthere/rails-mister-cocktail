@@ -1,1 +1,17 @@
-// Specific CSS for your home-page
+.container {
+  margin: 0 auto;
+  width: 1000px;
+  a {
+    color: gold;
+    transition: 0.8s ease;
+    &:hover {
+      text-decoration: none;
+      text-shadow: 0 0 15px gold;
+    }
+  }
+}
+
+#rick-logo {
+  height: 50px;
+  width: 50px;
+}

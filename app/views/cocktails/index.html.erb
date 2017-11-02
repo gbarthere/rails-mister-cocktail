@@ -2,20 +2,25 @@
   <div class="banner-content">
     <h1>Rick Sanchez's Cocktail</h1>
     <p>The best cocktail curator of the multiverse</p>
-    <%= image_tag "https://static1.squarespace.com/static/528252b7e4b00150d03a4848/59a2354eebbd1a0623e0cefe/59a2359ccd39c3181c45ba52/1503802784648/RickAndMorty_OohWeeMrPoopyButthole1500.png?format=500w" %>
+    <div class="img-fluid col-xs-12" id="img-banner">
+      <%= image_tag "https://static1.squarespace.com/static/528252b7e4b00150d03a4848/59a2354eebbd1a0623e0cefe/59a2359ccd39c3181c45ba52/1503802784648/RickAndMorty_OohWeeMrPoopyButthole1500.png?format=500w" %>
+    </div>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <h3><%= cocktail.name %></h3>
-      <%= image_tag "https://cdn.dribbble.com/users/11655/screenshots/2644741/rick_1x.png", class: "navbar-wagon-brand" %>
-      <h2><%= link_to "Details", cocktail_path(cocktail) %></h2>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://i.imgur.com/sOMAnoq.jpg');">
+        <div class="card-category">Buuuuurp</div>
+        <div class="card-description">
+          <h2><%= cocktail.name %></h2>
+          <h4><%= link_to "Details", cocktail_path(cocktail) %></h4>
+        </div>
+        <img class="card-user" src="https://static1.squarespace.com/static/528252b7e4b00150d03a4848/59a2354eebbd1a0623e0cefe/59a2359f6a49631dd5192334/1503802788601/RickAndMorty_RickAngryBurp1500.gif?format=1500w">
+      </div>
     </div>
     <% end %>
   </div>
 </div
-
-<h4><%= link_to "Create new cocktail", new_cocktail_path %></h4>
