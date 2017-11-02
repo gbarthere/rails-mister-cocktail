@@ -1,0 +1,44 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <%= link_to cocktails_path, class: "navbar-wagon-brand" do %>
+    <%= image_tag "https://static1.squarespace.com/static/528252b7e4b00150d03a4848/59a2354eebbd1a0623e0cefe/59a2359f6a49631dd5192334/1503802788601/RickAndMorty_RickAngryBurp1500.gif?format=1500w" %>
+  <% end %>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+    <!-- Links -->
+    <%= link_to "Add cocktail", new_cocktail_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    
+    <!-- Avatar with dropdown menu -->
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+        <%= image_tag "https://static1.squarespace.com/static/528252b7e4b00150d03a4848/59a2354eebbd1a0623e0cefe/59a2359f6a49631dd5192334/1503802788601/RickAndMorty_RickAngryBurp1500.gif?format=1500w", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li>
+            <%= link_to "#" do %>
+              <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "#" do %>
+              <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dropdown list appearing on mobile only -->
+  <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><a href="#">Some mobile link</a></li>
+        <li><a href="#">Other one</a></li>
+        <li><a href="#">Other one</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
