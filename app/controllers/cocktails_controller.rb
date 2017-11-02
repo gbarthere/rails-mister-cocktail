@@ -7,6 +7,8 @@ class CocktailsController < ApplicationController
   end
 
   def show
+    @ingredients = Ingredient.order("name asc")
+    @dose = Dose.new
   end
 
   def new
