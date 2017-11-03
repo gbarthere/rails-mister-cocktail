@@ -1,16 +1,18 @@
-<h1><%= @cocktail.name %></h1>
-<% if @cocktail.photo? %>
-  <%= cl_image_tag @cocktail.photo.path, width: 200, height: 300, crop: :fill %>
-<% end %>
-<ul>
-<% @cocktail.doses.each do |d|  %>
-  <li><%= d.description %> | <%= link_to "Delete", dose_path(d), method: :delete, data: { confirm: "Are you sure?" }  %></li>
-<% end %>
-</ul>
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :ingredient_id, collection: @ingredients %>
-  <%= f.input :description %>
-  <%= f.submit "add dose", class: "btn btn-primary" %>
-<% end %>
-<h4><%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail) %></h4>
-<h4><%= link_to "Back to cocktail list", cocktails_path %></h4>
+<div class="container">
+  <h1><%= @cocktail.name %></h1>
+  <% if @cocktail.photo? %>
+    <%= cl_image_tag @cocktail.photo.path, width: 200, height: 300, crop: :fill %>
+  <% end %>
+  <ul>
+  <% @cocktail.doses.each do |d|  %>
+    <li><%= d.ingredient.name %> : <%= d.description %> | <%= link_to "Delete", dose_path(d), method: :delete, data: { confirm: "Are you sure?" }  %></li>
+  <% end %>
+  </ul>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :ingredient_id, collection: @ingredients %>
+    <%= f.input :description %>
+    <%= f.submit "add dose", class: "btn btn-primary" %>
+  <% end %>
+  <h4><%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail) %></h4>
+  <h4><%= link_to "Back to cocktail list", cocktails_path %></h4>
+</div>

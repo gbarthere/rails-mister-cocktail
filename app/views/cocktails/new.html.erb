@@ -1,6 +1,13 @@
-
-<%= simple_form_for [@cocktail] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :attachinary %>
-  <%= f.submit "add cocktail", class: "btn btn-primary" %>
-<% end %>
+<div class="banner" style="background-image: url('http://orig05.deviantart.net/b424/f/2016/258/0/5/rick_and_morty_background_no_4_by_jurokoo-dahrvd7.png');">
+  <div class="container" id="new">
+    <div class="row">x
+      <div class="col-xs-12 col-sm-4">
+        <%= simple_form_for [@cocktail] do |f| %>
+          <%= f.input :name, label: false, placeholder:"How's your poison called pal' ?", wrapper_html: { class: 'box-name' } %>
+          <%= f.input :photo, as: :attachinary, wrapper_html: { class: 'box-input' } %>
+          <%= f.submit "add cocktail", class: "btn btn-info" %>
+      </div>
+        <% end %>
+    </div>
+  </div>
+</div>

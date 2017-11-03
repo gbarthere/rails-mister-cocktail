@@ -1,6 +1,6 @@
 .card {
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   height: 175px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
@@ -53,4 +53,10 @@
 }
 .card-link:hover {
   opacity: 0.1;
+}
+
+.card i {
+  position: absolute;
+  bottom: 5%;
+  right: -250%;
 }
