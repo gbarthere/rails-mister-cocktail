@@ -1,15 +1,32 @@
 .container {
-  height: 100vh;
-  margin: 0 auto;
+  min-height: 100vh;
   width: 1000px;
   a {
-    color: gold;
+    color: $yellow;
     transition: 0.8s ease;
     &:hover {
       text-decoration: none;
-      text-shadow: 0 0 15px gold;
+      text-shadow: 0 0 15px $yellow;
     }
   }
+}
+
+.row {
+  margin-top: 25px;
+}
+
+span a {
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 15px 20px;
+  background-color: #4E2093;
+  box-shadow: 1px 1px 15px #4E2093;
+  color: white;
+  &:hover {
+      text-decoration: none;
+      color: white;
+    }
+
 }
 
 #rick-logo {
