@@ -2,9 +2,9 @@
   <div class="container" id="new">
     <div class="row">x
       <div class="col-xs-12 col-sm-4">
-        <%= simple_form_for [@cocktail] do |f| %>
-          <%= f.input :name, label: false, placeholder:"How's your poison called pal' ?", wrapper_html: { class: 'box-name' } %>
-          <%= f.input :photo, as: :attachinary, wrapper_html: { class: 'box-input' } %>
+        <%= form_for [@cocktail] do |f| %>
+          <%= f.text_field :name, placeholder:"How's your poison called pal' ?" %>
+          <%= f.file_field :photo, as: :attachinary, wrapper_html: { class: 'box-input' } %>
           <%= f.submit "add cocktail", class: "btn btn-info" %>
       </div>
         <% end %>
