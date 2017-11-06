@@ -1,6 +1,7 @@
 .card {
-  margin-top: 15px;
-  margin-bottom: 10px;
+  flex: 1 1 28%;
+  margin: 10px;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://i.imgur.com/sOMAnoq.jpg');
   height: 175px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
@@ -9,12 +10,12 @@
   position: relative;
   border-radius: 5px;
   box-shadow: 1px 1px 20px #4E2093 ;
-  transition: 0.5s ease;
-   &:hover {
-    margin-top: 5px;
-    margin-bottom: 15px;
+  transition: 0.3s ease;
+  &:hover {
+    margin-top: 1px;
   }
 }
+
 .card-user {
   position: absolute;
   right: 10px;
@@ -27,31 +28,19 @@
   top: 10px;
   left: 10px;
   font-size: 15px;
-  text-transform: uppercase;
 }
 .card-description {
   position: absolute;
   bottom: 10px;
   left: 10px;
-}
-.card-description h2 {
+  a {
+    text-decoration: none;
+  }
+  h2 {
   font-size: 24px;
 }
-.card-description p {
-  font-size: 14px;
-  opacity: 0.7;
-  font-weight: lighter;
 }
-.card-link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  z-index: 2;
-  background: black;
-  opacity: 0;
-}
+ 
 
 .card i {
   position: absolute;

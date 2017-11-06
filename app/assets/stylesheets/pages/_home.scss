@@ -1,35 +1,41 @@
 .container {
-  min-height: 100vh;
-  width: 1000px;
+  max-width: 1000px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  
   a {
-    color: $yellow;
+    color: gold;
     transition: 0.8s ease;
     &:hover {
       text-decoration: none;
-      text-shadow: 0 0 15px $yellow;
+      text-shadow: 0 0 15px gold;
     }
   }
 }
 
-.row {
-  margin-top: 25px;
+.flex {
+  display: flex;
+  justify-content: center;
 }
 
-span a {
-  text-decoration: none;
+.btn {
+  a {
+    text-decoration: none;
+    color: white;
+    &:hover {
+    color: #9BF096;
+    transition: 0.5s ease;
+  }
+  }
+  margin-top: 30px;
+  margin-bottom: 10px;
   border-radius: 10px;
   padding: 15px 20px;
   background-color: #4E2093;
   box-shadow: 1px 1px 15px #4E2093;
   color: white;
-  &:hover {
-      text-decoration: none;
-      color: white;
-    }
-
-}
-
-#rick-logo {
-  height: 50px;
-  width: 50px;
 }

@@ -2,23 +2,20 @@
   <div class="banner-content">
     <h1>Rick Sanchez's Cocktail</h1>
     <p>The best cocktail curator of the multiverse</p>
-    <div class="hidden-xs" id="img-banner">
+    <div id="img-banner">
       <%= image_tag "https://static1.squarespace.com/static/528252b7e4b00150d03a4848/59a2354eebbd1a0623e0cefe/59a2359ccd39c3181c45ba52/1503802784648/RickAndMorty_OohWeeMrPoopyButthole1500.png?format=500w" %>
     </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-xs-4 col-xs-offset-5">
-    <span class="display-1"><%= link_to "Create your cocktail", new_cocktail_path %></span>
-  </div>
+
+<div class="flex">
+  <span class="btn"><%= link_to "Create your cocktail", new_cocktail_path %></span>
 </div>
 
-<div class="container" id="container-card">
-  <div class="row" id="cards">
+<div class="container">
     <% @cocktails.each do |cocktail| %>
-    <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://i.imgur.com/sOMAnoq.jpg');">
+      <div class="card">
         <div class="card-category">BuUuUurp</div>
         <div class="card-description">
           <h2><%= cocktail.name %></h2>
@@ -27,7 +24,5 @@
         <img class="card-user" src="https://static1.squarespace.com/static/528252b7e4b00150d03a4848/59a2354eebbd1a0623e0cefe/59a2359f6a49631dd5192334/1503802788601/RickAndMorty_RickAngryBurp1500.gif?format=1500w">
         <i class="fa fa-bomb" aria-hidden="true"></i>
       </div>
-    </div>
     <% end %>
-  </div>
 </div>
