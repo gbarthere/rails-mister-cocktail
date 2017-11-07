@@ -1,21 +1,10 @@
-.box-name {
-  box-shadow: 2px 3px 15px #CCC;
-}
-
-.box-input {
+.new-form {
+  font-family: "Russo One", sans-serif;
   margin: 10px;
+  padding-right: 10px;
 }
 
-#new {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: baseline;
-}
-
-
-
-.btn-primary {
-  margin: 20px;
+#form-name {
+  border-radius: 3px;
+  opacity: 0.8;
 }

@@ -21,7 +21,6 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-#gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
@@ -29,7 +28,6 @@ gem 'figaro'
 gem 'cloudinary', '1.1.7'
 gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
-#gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 # Use jquery as the JavaScript library
