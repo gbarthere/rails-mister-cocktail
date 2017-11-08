@@ -1,13 +1,13 @@
 <div class="banner" style="background-image: url('http://orig05.deviantart.net/b424/f/2016/258/0/5/rick_and_morty_background_no_4_by_jurokoo-dahrvd7.png');">
         <%= simple_form_for [@cocktail], defaults: { input_html: { class: 'new-form' } } do |f| %>
-        <div>
-          <h1>How's your poison called pal'?</h1>
-          <%= f.input :name, label: false, input_html: { id: 'form-name' } %>
+        <div class="form-row">
+          <h2>How's your poison called pal' ?</h2>
+          <%= f.input :name, label: false %>
         </div>
-        <div>
-          <h1>What does it look like?</h1>
-          <%= f.input :photo, as: :attachinary, input_html: { id: 'form-pic' } %>
+        <div class="form-row">
+          <h2>What does it look like ?</h2>
+          <%= f.input :photo, as: :attachinary %>
         </div>
-          <%= f.submit "Add cocktail", input_html: { id: 'form-submit' } %>
+          <%= f.submit "Add cocktail", input_html: { class: 'form-submit' } %>
         <% end %>
 </div>

@@ -1,10 +1,48 @@
-.new-form {
+.new-form, input[type="button" i], input[type="submit" i] {
   font-family: "Russo One", sans-serif;
-  margin: 10px;
-  padding-right: 10px;
 }
 
-#form-name {
+.form-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  h2 {
+    color: $yellow;
+    letter-spacing: 0.0625em;
+  }
+  input {
   border-radius: 3px;
-  opacity: 0.8;
+  font-size: 1.1em;
+  }
+}
+
+.cocktail_name {
+  margin-left: 50px;
+}
+
+.cocktail_photo {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-left: 50px;
+  label {
+    margin-right: 10px;
+  }
+}
+
+input[type="button" i], input[type="submit" i] {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-color: #4E2093;
+  border-radius: 10px;
+  padding: 15px 20px;
+  background-color: #4E2093;
+  box-shadow: 1px 1px 15px #4E2093;
+  font-size: 1.1em;
+  color: white;
+    &:hover {
+    color: #9BF096;
+    transition: 0.5s ease;
+  }
 }
