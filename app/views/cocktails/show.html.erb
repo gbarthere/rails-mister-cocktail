@@ -1,18 +1,23 @@
-<div class="container">
+<div class="banner" id="show" style="background-image: linear-gradient(rgba(2, 26, 58, 0.5), rgba(2, 26, 58, 0.5)), url('http://orig05.deviantart.net/b424/f/2016/258/0/5/rick_and_morty_background_no_4_by_jurokoo-dahrvd7.png');">
   <h1><%= @cocktail.name %></h1>
   <% if @cocktail.photo? %>
-    <%= cl_image_tag @cocktail.photo.path, width: 200, height: 300, crop: :fill %>
+    <%= cl_image_tag @cocktail.photo.path, crop: :fill %>
   <% end %>
   <ul>
   <% @cocktail.doses.each do |d|  %>
     <li><%= d.ingredient.name %> : <%= d.description %> | <%= link_to "Delete", dose_path(d), method: :delete, data: { confirm: "Are you sure?" }  %></li>
   <% end %>
   </ul>
-  <%= form_for [@cocktail, @dose] do |f| %>
-    <%= f.text_field :ingredient_id, collection: @ingredients %>
-    <%= f.text_field :description %>
-    <%= f.submit "add dose"%>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+  <div class="form-row">
+    <h2>Ingredient</h2>
+    <%= f.input :ingredient_id, label: false, collection: @ingredients %>
+  </div>
+  <div class="form-row">
+    <h2>Explain it to Morty</h2>
+    <%= f.input :description, label: false  %>
+  </div>
+    <%= f.submit "Add dose"%>
   <% end %>
-  <h4><%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail) %></h4>
-  <h4><%= link_to "Back to cocktail list", cocktails_path %></h4>
+  <h2><%= link_to "Back to cocktail list", cocktails_path %></h2>
 </div>

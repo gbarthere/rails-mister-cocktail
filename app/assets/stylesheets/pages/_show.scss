@@ -1,0 +1,27 @@
+#show {
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px 0;
+  }
+  display: flex;
+  flex-direction: column;
+  a {
+    text-decoration: none;
+    color: $yellow;
+  }
+  ul {
+    list-style-type: none;
+    li {
+      margin: 10px 0;
+    }
+  }
+}
+
+#dose_ingredient_id, #dose_description {
+  margin-left: 50px;
+  font-size: 1.2em;
+  box-shadow: 1 1 10px black;
+  font-family: "Russo One", sans-serif;
+}
