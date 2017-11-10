@@ -1,5 +1,5 @@
 .card {
-  flex: 1 1 28%;
+  flex: 1 1 30%;
   margin: 10px;
   background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://i.imgur.com/sOMAnoq.jpg');
   height: 175px;
@@ -13,6 +13,13 @@
   transition: 0.3s ease;
   &:hover {
     margin-top: 1px;
+  }
+}
+
+@media(max-width: 992px) {
+  .card {
+    flex: 1 1 40%;
+    height: 150px;
   }
 }
 
@@ -41,7 +48,6 @@
 }
 }
  
-
 .card i {
   position: absolute;
   bottom: 10px;

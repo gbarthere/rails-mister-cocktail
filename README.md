@@ -1,24 +1,4 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<h1>Rick Sanchez's Cocktail</h1>
+<p>A "Rick \& Morty" themed app.</p>
+<p>You can create a new cocktail, giving it a name and adding a picture. When looking at the details you can add the ingredients used in the cocktail and explain how to make it.</p>
+<p>Finally you can delete an ingredient/description and delete a cocktail</p>

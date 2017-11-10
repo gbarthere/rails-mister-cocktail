@@ -3,10 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
-  padding: 0px 50px;
+  height: 70px;
+  padding: 0 50px;
   color: rgba(0,0,0,0.3);
 }
+
 .footer-links {
   display: flex;
   align-items: center;
@@ -23,4 +24,13 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+@media(max-width: 992px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer-copyright {
+    text-align: center;
+  }
 }
